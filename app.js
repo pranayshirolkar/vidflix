@@ -1,28 +1,6 @@
-/*A very good example of how to write recursive (parallel) function
-var fs = require('fs');
-var path = require('path');
-var walk = function(dir, done) {
-  var results = [];
-  fs.readdir(dir, function(err, list) {
-    if (err) return done(err);
-    var pending = list.length;
-    if (!pending) return done(null, results);
-    list.forEach(function(file) {
-      file = path.resolve(dir, file);
-      fs.stat(file, function(err, stat) {
-        if (stat && stat.isDirectory()) {
-          walk(file, function(err, res) {
-            results = results.concat(res);
-            if (!--pending) done(null, results);
-          });
-        } else {
-          results.push(file);
-          if (!--pending) done(null, results);
-        }
-      });
-    });
-  });
-};
+/*
+A very good example of how to write recursive (parallel) function
+was adopted as it is from http://stackoverflow.com/a/5827895/2039735
 */
 var connect = require('connect');
 var serveStatic = require ('serve-static');
