@@ -1,0 +1,15 @@
+{
+  "name": "vidflix",
+  "version": "1.0.0",
+  "description": "personal Netflix clone built on angular and node",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pranay Shirolkar",
+  "license": "ISC",
+  "dependencies": {
+    "connect": "^3.5.0",
+    "serve-static": "^1.11.1"
+  }
+}
