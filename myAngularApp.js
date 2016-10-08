@@ -7,7 +7,7 @@ app.component('videoList', {
 	template:
 		'<div ng-repeat="video in $ctrl.videos" class="well">'+
 		'<h3>{{video.name}}</h3>'+
-		'<p><video src="{{video.name}}">Browser Support Error!</video></p></div>',
+		'<p><video src="{{video.name}}" controls>Browser Support Error!</video></p></div>',
 	controller: function VideoListController($http){
 		var _this=this;
 		$http.get('videoList.json')
