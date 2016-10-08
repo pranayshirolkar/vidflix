@@ -61,8 +61,7 @@ walk(__dirname,function(err, results){
 	fs.writeFile("videoList.json",JSON.stringify(results), "utf8", function(err, done){
 		//if err throw err;		
 		connect().use(serveStatic(__dirname)).listen(80, function(){
+		console.log('Server running on port 80');
 	});
 });
-//console.log(filenames);
-console.log('Server running on port 80');
 });
